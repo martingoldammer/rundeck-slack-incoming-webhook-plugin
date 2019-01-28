@@ -16,36 +16,8 @@
 {
    "attachments":[
       {
-         "fallback":"${state}: ${message}",
-         "pretext":"${message}",
-         "color":"${color}",
-         "fields":[
-            {
-               "title":"Job Name",
-               "value":"<${executionData.job.href}|${jobName}>",
-               "short":false
-            },
-            {
-                "title": "Job Start Time",
-                "value": "${executionData.dateStartedW3c}",
-                "short": true
-            },
-            {
-               "title":"Started By",
-               "value":"${executionData.user}",
-               "short":true
-            },
-            {
-               "title":"Project",
-               "value":"${executionData.project}",
-               "short":true
-            },
-            {
-               "title":"Options",
-               "value":"${args}",
-               "short":false
-            }
-	     ]
+		 "text": "${executionData.user} >> <${executionData.href}|#${executionData.id} ${jobName}>",
+		 "color": "${color}"
       }
    ]
 }
